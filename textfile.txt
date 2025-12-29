@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI WhatsApp Status Generator | Create Viral Status in Seconds</title>
+    <meta name="description" content="Generate unlimited creative, emotional, funny, attitude, and love WhatsApp status using AI. Perfect for daily updates!">
+    <meta name="keywords" content="WhatsApp status generator, AI status maker, viral status, WhatsApp quotes, status ideas">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            color: white;
+        }
+        
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        
+        header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            padding: 40px;
+            margin: 30px 0;
+        }
+        
+        .input-group {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #444;
+        }
+        
+        select, textarea {
+            width: 100%;
+            padding: 15px;
+            border-radius: 12px;
+            border: 2px solid #e0e0e0;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        select:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn i {
+            font-size: 1.4rem;
+        }
+        
+        .status-output {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9ff;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+            min-height: 100px;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            display: none;
+        }
+        
+        .status-output.show {
+            display: block;
+            animation: fadeIn 0.6s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .copy-btn {
+            background: #28a745;
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 1rem;
+        }
+        
+        .copy-btn:hover {
+            background: #218838;
+        }
+        
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .category-btn {
+            background: #f0f2ff;
+            border: 2px solid #e0e4ff;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        
+        .category-btn:hover {
+            background: #667eea;
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        .category-btn i {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: white;
+            opacity: 0.8;
+        }
+        
+        .ad-space {
+            text-align: center;
+            margin: 40px 0;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+            .card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>✨ AI WhatsApp Status Generator ✨</h1>
+            <p>Create Viral, Emotional & Trending Status in Seconds!</p>
+        </header>
+
+        <!-- Ad Banner 1 -->
+        <div class="ad-space">
+            <script> atOptions = { 'key' : 'e80396090b4c8e6d34f31a4db1e5b991', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script>
+            <script src="https://www.highperformanceformat.com/e80396090b4c8e6d34f31a4db1e5b991/invoke.js"></script>
+        </div>
+
+        <div class="card">
+            <h2 style="text-align:center; margin-bottom:30px; color:#667eea;">Generate Your Perfect Status</h2>
+
+            <div class="categories">
+                <div class="category-btn" data-category="Love 💕">Love 💕</div>
+                <div class="category-btn" data-category="Attitude 😎">Attitude 😎</div>
+                <div class="category-btn" data-category="Sad 😢">Sad 😢</div>
+                <div class="category-btn" data-category="Funny 😂">Funny 😂</div>
+                <div class="category-btn" data-category="Motivational 💪">Motivational 💪</div>
+                <div class="category-btn" data-category="Friendship 👥">Friendship 👥</div>
+            </div>
+
+            <div class="input-group">
+                <label for="category">Select Category</label>
+                <select id="category">
+                    <option value="">Choose a category...</option>
+                    <option value="Love 💕">Love 💕</option>
+                    <option value="Attitude 😎">Attitude 😎</option>
+                    <option value="Sad 😢">Sad 😢</option>
+                    <option value="Funny 😂">Funny 😂</option>
+                    <option value="Motivational 💪">Motivational 💪</option>
+                    <option value="Friendship 👥">Friendship 👥</option>
+                    <option value="Life 🌟">Life 🌟</option>
+                    <option value="Success 🏆">Success 🏆</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="keyword">Add Keywords (Optional)</label>
+                <textarea id="keyword" placeholder="e.g., missing you, broken heart, boss mindset, gym motivation..."></textarea>
+            </div>
+
+            <div style="text-align:center;">
+                <button class="btn" onclick="generateStatus()">
+                    <i class="fas fa-magic"></i> Generate AI Status
+                </button>
+            </div>
+
+            <div id="output" class="status-output">
+                <p id="generatedText">Your AI-generated WhatsApp status will appear here...</p>
+                <button class="btn copy-btn" onclick="copyStatus()">
+                    <i class="fas fa-copy"></i> Copy to Clipboard
+                </button>
+            </div>
+        </div>
+
+        <!-- Ad Banner 2 -->
+        <div class="ad-space">
+            <script src="https://pl27688425.effectivegatecpm.com/d9/49/6c/d9496c058313718fceaafe70d5241a63.js"></script>
+        </div>
+
+        <!-- More Ad -->
+        <div class="ad-space">
+            <script> atOptions = { 'key' : 'e80396090b4c8e6d34f31a4db1e5b991', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script>
+            <script src="https://www.highperformanceformat.com/e80396090b4c8e6d34f31a4db1e5b991/invoke.js"></script>
+        </div>
+
+        <!-- Another Ad -->
+        <div class="ad-space">
+            <script src="https://pl27688425.effectivegatecpm.com/d9/49/6c/d9496c058313718fceaafe70d5241a63.js"></script>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 AI WhatsApp Status Generator - Made with ❤️ for Status Lovers</p>
+        
+        <!-- Repeated Ads in Footer -->
+        <div class="ad-space" style="margin:20px 0;">
+            <script> atOptions = { 'key' : 'e80396090b4c8e6d34f31a4db1e5b991', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script>
+            <script src="https://www.highperformanceformat.com/e80396090b4c8e6d34f31a4db1e5b991/invoke.js"></script>
+        </div>
+        
+        <div class="ad-space" style="margin:20px 0;">
+            <script src="https://pl27688425.effectivegatecpm.com/d9/49/6c/d9496c058313718fceaafe70d5241a63.js"></script>
+        </div>
+    </footer>
+
+    <script>
+        const statuses = {
+            "Love 💕": [
+                "Tu meri wajah se khush hai, yeh hi meri sabse badi khushi hai ❤️",
+                "Tere bina saans lena mushkil lagta hai 🫶",
+                "Dil se dil tak ka safar sirf tera hai 💕",
+                "Tere ishq mein doob gaya hoon, ubharne ki koshish hi nahi karta 🌊❤️",
+                "Tu hi meri morning aur night dono hai ☀️🌙"
+            ],
+            "Attitude 😎": [
+                "Apna time aayega, aur tab duniya dekhegi 🔥",
+                "Main wahi hoon jo sapne dekhta aur poore karta hai 😎",
+                "Meri marzi ke baghair patta bhi nahi hilta 🌪️",
+                "King banne ka sapna nahi, King rehne ka style hai 👑",
+                "Haters meri fame ka hissa hain 😏"
+            ],
+            "Sad 😢": [
+                "Kuch rishte toot kar bhi dard dete hain 💔",
+                "Tere jaane ke baad khud ko sambhalna seekh liya 😞",
+                "Raaton mein neend nahi, khayalon mein tu hai 🌙",
+                "Hasna toh aata hai, par dil se nahi hota ab 😔",
+                "Zakhm toh bhar gaye, par dard ab bhi hai 🥀"
+            ],
+            "Funny 😂": [
+                "Single hone ka fayda: Khud se baat karne mein koi disturbance nahi 😜",
+                "Ex ne block kiya? Ab toh peace mil gaya shanti se 🙏😂",
+                "Diet shuru ki thi, pizza ne call kiya aur main chala gaya 🍕😭",
+                "Battery low hone se pehle mera mood low ho jata hai ⚡",
+                "Paisa bolta hai, par meri jeb mein echo hi sunai deta hai 💸😂"
+            ],
+            "Motivational 💪": [
+                "Rukna nahi hai, manzil abhi door hai 🏃‍♂️",
+                "Har subah ek naya mauka hai jeetne ka 🌅",
+                "Sapne woh nahi jo sote waqt dekhe, sapne woh jo sone na de 💪",
+                "Tumhare sapne tumhare hain, unke liye ladna padega 🔥",
+                "Asaan rasta chhod do, great banne ka rasta mushkil hi hota hai"
+            ],
+            "Friendship 👥": [
+                "Dost wahi jo burai mein bhi saath de 😎",
+                "Yaar ke saath waqt guzarna, zindagi ka best part hai ❤️",
+                "Dushman se zyada dost hi yaad rehte hain 👬",
+                "Dost hi toh woh hain jo ghar jaisa feel karaye 🏠",
+                "Zindagi mein agar ek sachcha dost ho, toh sab kuch hai 
